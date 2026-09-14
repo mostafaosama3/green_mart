@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:green_mart/core/constants/appimages.dart';
 import 'package:green_mart/core/functions/Navigations.dart';
-import 'package:green_mart/core/utils/appcolor.dart';
+import 'package:green_mart/core/styles/appcolor.dart';
 import 'package:green_mart/features/welcome/welcome_screen.dart';
 
  class SplashScreen extends StatefulWidget {
@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Future.delayed(Duration(seconds: 6), () {
-      Pushto(context, const WelcomeScreen());
+      pushReplacement(context, const WelcomeScreen());
     });
     super.initState();
   }

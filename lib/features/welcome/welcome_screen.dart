@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:green_mart/core/constants/appimages.dart';
-import 'package:green_mart/core/utils/appcolor.dart';
-
+import 'package:green_mart/core/functions/Navigations.dart';
+import 'package:green_mart/core/styles/appcolor.dart';
+import 'package:green_mart/features/auth/login.dart';
 import '../../core/widgets/main_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -47,7 +48,10 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                 ),
                 Gap(20),
-                MainButton(title: "Get Started", ontap: () {}),
+                MainButton(title: "Get Started", ontap: () {
+pushReplacement(context, Login());
+                
+                }),
                 Gap(10),
               ],
             ),
