@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:green_mart/core/constants/appimages.dart';
+import 'package:green_mart/core/functions/Navigations.dart';
 import 'package:green_mart/core/styles/appcolor.dart';
 import 'package:green_mart/core/styles/text_styles.dart';
 import 'package:green_mart/core/widgets/custom_svg_image.dart';
+import 'package:green_mart/features/auth/login.dart';
 
 class AccountScreen extends StatelessWidget {
   const AccountScreen({Key? key}) : super(key: key);
@@ -127,7 +129,9 @@ Gap(8),
                   width: double.infinity,
                   height: 60,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      pushReplacement(context, Login());
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFFF2F3F2),
                       elevation: 0,
